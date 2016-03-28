@@ -1,6 +1,6 @@
 var defaultApp = angular.module("defaultApp", ['ngRoute']);
 defaultApp.controller('TabsController', function($scope){
-  $scope.tabs=['Home', 'Resume', 'SampleWorks'];
+  $scope.tabs=['Home', 'Bio', 'Contact', 'Resume', 'SampleWorks'];
 
 });
 defaultApp.config(function($routeProvider){
@@ -9,6 +9,12 @@ defaultApp.config(function($routeProvider){
     .when('/Home', {
      /* controller: "TabsController",*/
       templateUrl: '/Home.html'
+    })
+    .when('/Bio', {
+      templateUrl: '/Bio.html'
+    })
+    .when('/Contact', {
+      templateUrl: 'Contact.html'
     })
     .when('/Resume', {
       //controller: "TabsController",
